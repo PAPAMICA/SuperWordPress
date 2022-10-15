@@ -34,7 +34,7 @@ install_theme () {
         ${COMMAND} theme update $1
     else
         echo "Install $1 theme"
-        ${COMMAND} theme install $1
+        ${COMMAND} theme install $1 --activate
     fi
 }
 

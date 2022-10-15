@@ -34,6 +34,10 @@ services:
       WORDPRESS_ADMIN_USERNAME: admin
       WORDPRESS_ADMIN_PASSWORD: papamica
       WORDPRESS_ADMIN_EMAIL: papamica@exemple.com
+      PLUGINS_TO_INSTALL: "mainwp-child elementor updraftplus header-footer-elementor envato-elements include-matomo jetpack wp-mail-smtp wordpress-seo duplicate-post autoptimize contact-form-7"
+      PLUGINS_TO_REMOVE: "hello-dolly askimet"
+      THEMES_TO_INSTALL: "hello-elementor"
+      THEMES_TO_REMOVE: "twentytwenty twentytwentytwo twentytwentyone"
       WORDPRESS_URL: 
       WORDPRESS_TITLE: wordpress-test
     healthcheck:
