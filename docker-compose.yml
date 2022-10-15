@@ -1,0 +1,38 @@
+version: "2"
+
+services:
+  # Base de données
+  wordpress-db:
+    container_name: wordpress-db
+    image: mysql:5.7
+    volumes:
+      - ./data/db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+    environment:
+      MYSQL_ROOT_PASSWORD: SuperPassword1234
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: SuperPassword
+    labels:
+      - "autoupdate=monitor" # https://github.com/PAPAMICA/container-updater
+
+  wordpress:
+    container_name: wordpress
+    depends_on:
+      - wordpress-db
+    image: superwordpress
+    volumes:
+      - ./data/html:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: wordpress-db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: SuperPassword
+      WORDPRESS_DB_NAME: wordpress
+    healthcheck:
+      test: curl --fail http://localhost:80 || exit 1
+      interval: 1m
+      timeout: 30s
+      retries: 3
