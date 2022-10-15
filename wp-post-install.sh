@@ -11,6 +11,8 @@ if [ ! $(${COMMAND} core is-installed) ]; then
 fi
 
 echo "Updating WordPress Core"
+${COMMAND} language core install ${WORDPRESS_LANGUAGE}
+${COMMAND} language core activate ${WORDPRESS_LANGUAGE}
 ${COMMAND} core update --locale=${WORDPRESS_LANGUAGE}
 
 echo "Updating existing plugins and themes"
