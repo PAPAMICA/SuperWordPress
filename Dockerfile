@@ -13,6 +13,7 @@ ENV \
 COPY install-plugins.sh /usr/local/bin/install-plugins.sh
 COPY wp-post-install.sh /usr/local/bin/wp-post-install
 COPY docker_entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+COPY uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
 RUN chmod +x /usr/local/bin/install-plugins.sh &&\
     chmod +x /usr/local/bin/wp-post-install &&\
