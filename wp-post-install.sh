@@ -10,6 +10,9 @@ if [ ! $(${COMMAND} core is-installed) ]; then
  ${COMMAND} --admin_user="${WORDPRESS_ADMIN_USERNAME}" --admin_password="${WORDPRESS_ADMIN_PASSWORD}" --admin_email="${WORDPRESS_ADMIN_EMAIL}" --title="${WORDPRESS_TITLE}" --url="${WORDPRESS_URL}" core install
 fi
 
+echo "Updating WordPress Core"
+${COMMAND} core update --locale=${WORDPRESS_LANGUAGE}
+
 echo "Updating existing plugins and themes"
 ${COMMAND} plugin update-all
 ${COMMAND}t theme update-all
