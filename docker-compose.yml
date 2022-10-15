@@ -31,6 +31,11 @@ services:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: SuperPassword
       WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_ADMIN_USERNAME: admin
+      WORDPRESS_ADMIN_PASSWORD: papamica
+      WORDPRESS_ADMIN_EMAIL: papamica@exemple.com
+      WORDPRESS_URL: 
+      WORDPRESS_TITLE: wordpress-test
     healthcheck:
       test: curl --fail http://localhost:80 || exit 1
       interval: 1m

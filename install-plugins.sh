@@ -1,34 +1,62 @@
 #!/bin/bash
 COMMAND="sudo -u www-data wp --path=${WORDPRESS_PATH}"
+
+PLUGINS_TO_INSTALL="${PLUGINS_TO_INSTALL}"
+PLUGINS_TO_REMOVE="${PLUGINS_TO_REMOVE}"
+
+THEMES_TO_INSTALL="${THEMES_TO_INSTALL}"
+THEMES_TO_REMOVE="${THEMES_TO_REMOVE}"
+
 echo "Installing plugins and themes"
 
 #Append below for the plugin installation
 
-if [ $(${COMMAND} plugin is-installed hello) ]; then
-  echo "Removing Useless Plugin hello"
-  ${COMMAND} plugin delete hello
-fi
+install_plugin () {
+    if [ $(${COMMAND} plugin is-installed $1) ]; then
+        echo "Update $1 plugin"
+        ${COMMAND} plugin update $1 --activate
+    else
+        echo "Install $1 plugin"
+        ${COMMAND} plugin install $1 --activate
+    fi
+}
 
-if [ $(${COMMAND} plugin is-installed wp-piwik) ]; then
-  echo "Update piwik plugin for web analytics"
-  ${COMMAND} plugin update wp-piwik --activate
-else
-  echo "Install piwik plugin for web analytics"
-  ${COMMAND} plugin install wp-piwik --activate
-fi
+remove_plugin () {
+    if [ $(${COMMAND} plugin is-installed $1) ]; then
+        echo "Removing Useless Plugin $1"
+        ${COMMAND} plugin delete $1
+    fi
+}
 
-if [ $(${COMMAND} plugin is-installed twitter) ]; then
-  echo "Update twitter plugin for providing a social appearance to the site"
-  ${COMMAND} plugin update twitter --activate
-else
-  echo "Install twitter plugin for providing a social appearance to the site"
-  ${COMMAND} plugin install twitter --activate
-fi
+install_theme () {
+    if [ $(${COMMAND} theme is-installed $1) ]; then
+        echo "Update $1 theme"
+        ${COMMAND} theme update $1
+    else
+        echo "Install $1 theme"
+        ${COMMAND} theme install $1
+    fi
+}
 
-if [ $(${COMMAND} plugin is-installed cookie-notice) ]; then
-  echo "Update cookie notice plugin in order to sho information regarding cookies"
-  ${COMMAND} plugin update cookie-notice --activate
-else
-  echo "Install cookie notice plugin in order to sho information regarding cookies"
-  ${COMMAND} plugin install cookie-notice --activate
-fi
+remove_theme () {
+    if [ $(${COMMAND} theme is-installed $1) ]; then
+        echo "Removing Useless theme $1"
+        ${COMMAND} theme delete $1
+    fi
+}
+
+for PLUGIN in $PLUGINS_TO_INSTALL; do
+    install_plugin $PLUGIN
+done
+
+for PLUGIN in $PLUGINS_TO_REMOVE; do
+    remove_plugin $PLUGIN
+done
+
+for THEME in $THEMES_TO_INSTALL; do
+    install_theme $THEME
+done
+
+for THEME in $THEMES_TO_REMOVE; do
+    remove_theme $THEME
+done
