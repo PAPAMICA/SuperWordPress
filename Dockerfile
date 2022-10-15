@@ -3,11 +3,6 @@ LABEL maintainer="mickael@papamica.com"
 LABEL org.opencontainers.image.source https://github.com/PAPAMICA/SuperWordPress
 
 ENV \
-    WORDPRESS_ADMIN_USERNAME='admin' \
-    WORDPRESS_ADMIN_PASSWORD='admin123' \
-    WORDPRESS_ADMIN_EMAIL="admin@example.com" \
-    WORDPRESS_URL="localhost" \
-    WORDPRESS_TITLE="My localhost site" \
     DEBIAN_FRONTEND=noninteractive
 
 COPY install-plugins.sh /usr/local/bin/install-plugins.sh
