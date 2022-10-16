@@ -10,14 +10,18 @@ if [ ! $(${COMMAND} core is-installed) ]; then
  ${COMMAND} --admin_user="${WORDPRESS_ADMIN_USERNAME}" --admin_password="${WORDPRESS_ADMIN_PASSWORD}" --admin_email="${WORDPRESS_ADMIN_EMAIL}" --title="${WORDPRESS_TITLE}" --url="${WORDPRESS_URL}" core install
 fi
 
-echo "Updating WordPress Core"
-${COMMAND} language core install ${WORDPRESS_LANGUAGE}
-${COMMAND} site switch-language ${WORDPRESS_LANGUAGE}
-${COMMAND} core update --locale=${WORDPRESS_LANGUAGE}
 
-echo "Updating existing plugins and themes"
-${COMMAND} plugin update-all
-${COMMAND}t theme update-all
+
+if [[ "$UPDATE_AT_START" == true ]]; then
+    echo "Updating WordPress Core"
+    ${COMMAND} language core install ${WORDPRESS_LANGUAGE}
+    ${COMMAND} site switch-language ${WORDPRESS_LANGUAGE}
+    ${COMMAND} core update --locale=${WORDPRESS_LANGUAGE}
+
+    echo "Updating existing plugins and themes"
+    ${COMMAND} plugin update-all
+    ${COMMAND}t theme update-all
+fi
 
 echo "Fixing Permissions"
 chown www-data:www-data -R .

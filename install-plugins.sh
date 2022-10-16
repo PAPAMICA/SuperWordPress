@@ -57,6 +57,10 @@ for THEME in $THEMES_TO_REMOVE; do
     remove_theme $THEME
 done
 
+if [[ "$PLUGINS_AUTOUPDATE" == "true" ]]; then
+    ${COMMAND} plugin auto-updates enable --all
+fi
+
 ${COMMAND} language core update
-${COMMAND} language plugin --all update
-${COMMAND} language theme --all update
+${COMMAND} language plugin update --all
+${COMMAND} language theme update --all
