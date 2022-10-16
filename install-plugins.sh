@@ -62,3 +62,5 @@ for THEME in $THEMES_TO_REMOVE; do
 done
 
 ${COMMAND} language core update
+${COMMAND} language plugin --all update
+${COMMAND} language theme --all update
