@@ -72,7 +72,7 @@ services:
       WORDPRESS_ADMIN_EMAIL: papamica@exemple.com
       WORDPRESS_LANGUAGE: "fr_FR"
       PLUGINS_TO_INSTALL: "mainwp-child elementor updraftplus header-footer-elementor envato-elements include-matomo jetpack wp-mail-smtp wordpress-seo duplicate-post autoptimize contact-form-7"
-      PLUGINS_TO_REMOVE: "hello-dolly akismet"
+      PLUGINS_TO_REMOVE: "hello akismet"
       THEMES_TO_INSTALL: "hello-elementor"
       THEMES_TO_REMOVE: "twentytwenty twentytwentytwo twentytwentyone"
       WORDPRESS_URL: localhost
