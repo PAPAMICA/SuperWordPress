@@ -43,8 +43,8 @@ services:
       THEMES_TO_REMOVE: "twentytwenty twentytwentytwo twentytwentyone"
       WORDPRESS_URL: 
       WORDPRESS_TITLE: wordpress-test
-      PLUGINS_AUTOUPDATE: True
-      UPDATE_AT_START: True
+      PLUGINS_AUTOUPDATE: true
+      UPDATE_AT_START: true
     healthcheck:
       test: curl --fail http://localhost:80 || exit 1
       interval: 1m

@@ -12,7 +12,7 @@ fi
 
 
 
-if [[ "$UPDATE_AT_START" == "True" ]]; then
+if [ "$UPDATE_AT_START" = true ]; then
     echo "Updating WordPress Core"
     ${COMMAND} language core install ${WORDPRESS_LANGUAGE}
     ${COMMAND} site switch-language ${WORDPRESS_LANGUAGE}
@@ -20,7 +20,7 @@ if [[ "$UPDATE_AT_START" == "True" ]]; then
 
     echo "Updating existing plugins and themes"
     ${COMMAND} plugin update-all
-    ${COMMAND}t theme update-all
+    ${COMMAND} theme update-all
 fi
 
 echo "Fixing Permissions"
