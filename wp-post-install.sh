@@ -14,7 +14,6 @@ echo "Updating WordPress Core"
 ${COMMAND} language core install ${WORDPRESS_LANGUAGE}
 ${COMMAND} site switch-language ${WORDPRESS_LANGUAGE}
 ${COMMAND} core update --locale=${WORDPRESS_LANGUAGE}
-${COMMAND} language core update
 
 echo "Updating existing plugins and themes"
 ${COMMAND} plugin update-all

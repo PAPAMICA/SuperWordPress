@@ -60,3 +60,5 @@ done
 for THEME in $THEMES_TO_REMOVE; do
     remove_theme $THEME
 done
+
+${COMMAND} language core update
