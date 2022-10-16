@@ -6,9 +6,7 @@
 
 <p align="center">
   <a href="#"><img src="https://readme-typing-svg.herokuapp.com?center=true&vCenter=true&lines=Super-WordPress;"></a>
-  WordPress with some plugins and options for my deployement !
 </p>
-
 <p align="center">
     <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/PAPAMICA/SuperWordPress/ci?label=Build%20image%20and%20push%20to%20DockerHub&logo=docker&logoColor=white&style=for-the-badge">
     <br />
