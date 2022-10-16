@@ -27,6 +27,8 @@ This application is also available in my other project for easy deployment:
 </p>
 </div>
 
+# Presentation
+This modified WordPress image allows you to update WordPress at launch, install plugins, themes and languages automatically, and create an administrator account.
 # How to use
 ## Docker compose
 ```yaml
