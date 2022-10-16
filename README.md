@@ -6,6 +6,7 @@
 
 <p align="center">
   <a href="#"><img src="https://readme-typing-svg.herokuapp.com?center=true&vCenter=true&lines=Super-WordPress;"></a>
+  WordPress with some plugins and options for my deployement !
 </p>
 
 <p align="center">
@@ -17,19 +18,16 @@
 </p>
 
 <div align="center">
-**WordPress with some plugins and options for my deployement.**
-
 You can deploye a compatible Docker environment with Portainer and Traefik with:
 <p align="center">
   <a href="https://github.com/PAPAMICA/docker-environment"><img src="https://img.shields.io/badge/docker_environment-%2300B8FC.svg?style=for-the-badge&logo=github&logoColor=white"></a>
 </p>
-
+<br />
 This application is also available in my other project for easy deployment:
 <p align="center">
   <a href="https://github.com/PAPAMICA/docker-compose-collection"><img src="https://img.shields.io/badge/docker_compose_collection-%2300B8FC.svg?style=for-the-badge&logo=github&logoColor=white"></a>
 </p>
 </div>
----
 
 # How to use
 ## Docker compose
