@@ -1,6 +1,7 @@
 FROM wordpress:latest
 LABEL maintainer="mickael@papamica.com"
-LABEL org.opencontainers.image.source https://github.com/PAPAMICA/SuperWordPress
+LABEL org.opencontainers.image.source=https://github.com/PAPAMICA/SuperWordPress
+
 
 ENV \
     DEBIAN_FRONTEND=noninteractive
