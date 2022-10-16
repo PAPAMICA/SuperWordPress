@@ -12,7 +12,7 @@ fi
 
 
 
-if [[ "$UPDATE_AT_START" == true ]]; then
+if [[ "$UPDATE_AT_START" == "True" ]]; then
     echo "Updating WordPress Core"
     ${COMMAND} language core install ${WORDPRESS_LANGUAGE}
     ${COMMAND} site switch-language ${WORDPRESS_LANGUAGE}
