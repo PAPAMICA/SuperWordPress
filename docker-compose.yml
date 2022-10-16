@@ -23,7 +23,7 @@ services:
     container_name: wordpress
     depends_on:
       - wordpress-db
-    image: superwordpress
+    image: papamica/superwordpress
     volumes:
       - ./data/html:/var/www/html
     ports:
@@ -48,3 +48,5 @@ services:
       interval: 1m
       timeout: 30s
       retries: 3
+    labels:
+      - "autoupdate=monitor" # https://github.com/PAPAMICA/container-updater
