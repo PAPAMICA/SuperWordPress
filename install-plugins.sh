@@ -22,10 +22,8 @@ install_plugin () {
 }
 
 remove_plugin () {
-    if [ $(${COMMAND} plugin is-installed $1) ]; then
-        echo "Removing Useless Plugin $1"
-        ${COMMAND} plugin delete $1
-    fi
+    echo "Removing Useless Plugin $1"
+    ${COMMAND} plugin delete $1
 }
 
 install_theme () {
@@ -39,10 +37,8 @@ install_theme () {
 }
 
 remove_theme () {
-    if [ $(${COMMAND} theme is-installed $1) ]; then
-        echo "Removing Useless theme $1"
-        ${COMMAND} theme delete $1
-    fi
+    echo "Removing Useless theme $1"
+    ${COMMAND} theme delete $1
 }
 
 for PLUGIN in $PLUGINS_TO_INSTALL; do
