@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/PAPAMICA/SuperWordPress/CI?label=Build%20image%20and%20push%20to%20DockerHub&logo=docker&logoColor=white&style=for-the-badge">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/PAPAMICA/SuperWordPress/ci?label=Build%20image%20and%20push%20to%20DockerHub&logo=docker&logoColor=white&style=for-the-badge">
     <br />
     <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/docker-%232496ED.svg?style=for-the-badge&logo=docker&logoColor=white"> </a>
     <a href="https://www.wordpress.org/"><img src="https://img.shields.io/badge/portainer-%2321759B.svg?style=for-the-badge&logo=wordpress&logoColor=white"> </a>
