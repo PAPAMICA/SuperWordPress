@@ -86,4 +86,8 @@ services:
       - "autoupdate=monitor" # https://github.com/PAPAMICA/container-updater
 ```
 
+## Manual script :
+```
+bash -c "$(curl -s https://raw.githubusercontent.com/PAPAMICA/SuperWordPress/main/manual_install.sh)"
+```
 
