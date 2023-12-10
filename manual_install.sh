@@ -5,7 +5,7 @@ PLUGINS_TO_INSTALL="elementor updraftplus envato-elements jetpack wp-mail-smtp w
 PLUGINS_TO_REMOVE="hello-dolly akismet"
 
 THEMES_TO_INSTALL="hello-elementor"
-THEMES_TO_REMOVE="twentytwenty twentytwentytwo twentytwentyone"
+THEMES_TO_REMOVE="twentytwenty twentytwentytwo twentytwentyone twentytwentyfour twentytwentythree"
 
 echo "Installing wp-cli"
 
