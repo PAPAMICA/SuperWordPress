@@ -1,7 +1,7 @@
 #!/bin/bash
 COMMAND="wp --allow-root --path=/var/www/html"
 
-PLUGINS_TO_INSTALL="elementor updraftplus envato-elements jetpack wp-mail-smtp wordpress-seo duplicate-post wordfence wp-hide-security-enhancer complianz-gdpr burst-statistics litespeed-cache"
+PLUGINS_TO_INSTALL="elementor updraftplus envato-elements jetpack wp-mail-smtp wordpress-seo duplicate-post wordfence wp-hide-security-enhancer complianz-gdpr burst-statistics litespeed-cache redis-cache"
 PLUGINS_TO_REMOVE="hello-dolly akismet"
 
 THEMES_TO_INSTALL="hello-elementor"
