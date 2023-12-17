@@ -1,4 +1,13 @@
-# WordPress Checklist
+<p align="center">
+  <a href="https://papamica.com">
+    <img src="https://zupimages.net/up/20/04/7vtd.png" width="140px" alt="PAPAMICA" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="#"><img src="https://readme-typing-svg.herokuapp.com?center=true&vCenter=true&lines=WordPress-Checklist;"></a>
+</p>
+
 More details at [Wiki-Tech.io](https://wiki-tech.io/Web/WordPress/checklist)
 ## Useful Projects:
  - [PAPAMICA/docker-environment](https://github.com/PAPAMICA/docker-environment)
