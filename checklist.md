@@ -1,5 +1,13 @@
   
 # Checklist WordPress
+Plus de détails sur [Wiki-Tech.io](https://wiki-tech.io/Web/WordPress/checklist)
+## Projets utiles :
+ - [PAPAMICA/docker-environment](https://github.com/PAPAMICA/docker-environment)
+ - [PAPAMICA/docker-compose-collection](https://github.com/PAPAMICA/docker-compose-collection)
+ - [PAPAMICA/container-updater](https://github.com/PAPAMICA/container-updater)
+ - [PAPAMICA/Backup-Script](https://github.com/PAPAMICA/Backup-Script)
+ - [PAPAMICA/SuperWordPress](https://github.com/PAPAMICA/SuperWordPress)
+
 ## Déploiement de WordPress (30 min)
 
  - [ ] Mettre en place WordPress et sa base de données
